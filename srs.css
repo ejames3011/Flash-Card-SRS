@@ -1,0 +1,324 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+#remove-deck {
+	bottom: 0px;
+	position: relative;
+}
+
+.deck-title {
+	background-color: #fff;
+	border-bottom:1px solid black;
+	color: #404040;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font: bold;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+.vertical-menu {
+	background-color: #000;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px;
+}
+
+.tab {
+	background-color: inherit;
+	border-bottom: 1px solid #ccc;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: 'Lato', sans-serif;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 12px;
+	text-decoration: none;
+
+}
+
+.tab:hover {
+	background-color: #999999;
+	color: white;
+}
+
+
+.active-tab {
+	background-color: #666;
+	color: white;
+}
+.tab-label {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	padding: 1px;
+	text-overflow: ellipsis;
+	width: 100px;
+}
+
+.tab button {
+	display: inline-block;
+}
+
+.add-card {
+	float: right;
+	display: none;
+}
+
+.title { 
+	background-color: #0E3549;
+	border-bottom: 0.5px solid #f2f2f2;
+	color: #C6D5D4;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+ }
+
+ .delete-card {
+ 	position: absolute;
+ 	left: 600px;
+ 	top: 7px;
+ }
+
+ .counter {
+ 	background-color: #355073;
+ 	color: #C6D5D4;
+ 	font-family: 'Lato', sans-serif;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+.counter li{
+	display: inline-block;
+	margin: 0px;
+	width: 130px;
+}
+
+.counter li div {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.frame{
+	margin: 0px;
+	font-size: 200px;
+	background-color: #C6D5D4;
+	color: #0E3549;
+	height: 360px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 385px;
+}
+
+.controls {
+	background-color: #355073;
+	border-top: 1px solid white;
+ 	color: #C6D5D4;
+	display: none;
+	font-family:'Lato', sans-serif;
+}
+
+.controls div {
+	cursor: pointer;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	width: 50%;
+}
+
+.controls div:hover {
+	background-color: #C6D5D4;
+ 	color: #355073;
+}
+.know {
+	border-right: 1px solid white;
+	float: left;
+}
+.dont-know {
+	float: right;
+}
+
+
+.answer {
+	background-color: #355073;
+	border-top: 1px solid white;
+ 	color: #C6D5D4;
+	cursor: pointer;
+	font-family: 'Lato', sans-serif;
+	height: 27px;
+	margin: 0px;
+	text-align: center;
+}
+
+.answer:hover {
+	background-color: #C6D5D4;
+ 	color: #355073;
+}
+
+.left-wrapper {
+	background-color: white;
+	float: left;
+	height: inherit;
+	overflow: scroll;
+	width: 30%;
+}
+
+.button-container {
+
+	margin-left: auto;
+	margin-right: auto;
+	overflow: visible;
+	width: 160px;
+}
+
+button {
+	background-color: #ccc;
+	border: 1px solid black;
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	padding: 5px;
+	position: relative;
+	text-decoration: none;
+
+}
+
+button:hover {
+	background-color: #eee;
+}
+
+.remove-deck, .add-deck {
+		top: 10px;
+
+}
+
+
+.right-wrapper {
+	background-color: #9fbfdf;
+	float: right;
+	height: inherit;
+	width: 70%;
+
+}
+
+.box {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+
+	height: 490px;
+	margin: -245px 0 0 -350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	}
+
+.add-card-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.add-card-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.invalid {
+	color: red;
+	display: none;
+}
+
+.add-deck-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.deck-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50%;
+}
+
+.delete-card-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.delete-card-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#measure-text {
+	display: block;
+	height: auto;
+	position: absolute;
+	visibility: hidden;
+	white-space: nowrap;
+	width: auto;
+}

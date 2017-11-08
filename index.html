@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<head>
+<LINK href="srs.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">	
+  </script>
+<script src="makeDeck.js"></script>
+<script src="srs.js"></script> 
+<!-- <script src="jquery.js"></script> -->
+
+</head>
+
+<div class = "box">
+
+	<div class="left-wrapper">
+		<div class="deck-title">Flash Card Decks</div>
+		<div class="vertical-menu" id = "deck-menu">
+			
+		</div>
+		<div class = "button-container">
+			<button id ="add-deck" class="add-deck" type = "button">Add Deck</button>	
+			<button id ="remove-deck" class = "remove-deck" type = "button">Remove Deck</button>
+		</div>		
+	</div>
+
+	<div class = "right-wrapper">
+		
+		<div id = "title" class = "title"></div>
+		<button id = "delete-card" class = "delete-card" type = "button">Delete Card</button>
+		
+		<ul class = "counter">
+			<li ><div>New</div><div id = "new">0</div></li>
+			<li ><div>New Review</div><div id = "newReview">0</div></li>
+			<li ><div>Old Review</div><div id = "oldReview">0</div></li>
+		</ul>
+		<div id = "frame" class = "frame"></div>
+		<div id = "answer" class = "answer">Show Answer</div>
+		<div id = "controls" class = "controls">
+			<div class = "know" id = "know">Know</div>
+			<div class = "dont-know" id ="dont">Don't Know</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="add-deck-modal" class="add-deck-modal"> 
+
+	<div class="deck-content">
+		<span id = "close" class="close">&times;</span>
+		<p>Input deck name.</p>
+		<input type="text" id = "deck-name" name="deck-name"><br>
+		<div id = "deck-invalid" class = "invalid"></div>
+		<button type = "button" id ="deck-create">Create Deck</button>
+
+	</div>
+
+</div>
+
+<div id="add-card-modal" class="add-card-modal">
+
+	<div class="add-card-content" class="add-card-content">
+		<span id = "card-close" class="close">&times;</span>
+		<p> Input flash card values.</p>
+		<label for="card-front"> Front Card </label>
+		<input type="text" id = "card-front" name = "card-front">
+		<label for"card-back"> Back Card </label>
+		<input type="text" id = "card-back"  name = "card-back"><br>
+		<div id = "card-invalid" class = "invalid"></div>
+		<button type = "button" id = "create-card">Create Card</button>
+	</div>
+
+</div>
+
+<div id="delete-card-modal" class="delete-card-modal">
+
+	<div class="delete-card-content" class="delete-card-content">
+		<span id = "delete-close" class="close">&times;</span>
+		<p>Are you sure you want to delete this card?</p>
+		<button type = "button" id = "delete-yes">Yes</button>
+		<button type = "button" id = "delete-no">No</button>
+	</div>
+
+</div>
+
+<div id = "measure-text"></div>
+</html>
+
+	
